@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+logbook:
+  filter:
+    enabled: true
+  format:
+    style: json
+  include: /**

@@ -19,7 +19,7 @@ import org.springframework.web.context.WebApplicationContext;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @ContextConfiguration(classes = Application.class)
-public class JsonToPropSetControllerTest {
+public class ConverterControllerTest {
 
 	@Autowired
 	private WebApplicationContext wac;

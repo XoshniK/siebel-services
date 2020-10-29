@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
+  <property name="LOG_FOLDER" value="./siebel-json-logs"/>
+
+  <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+  <appender name="FILE_AUDIT"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_FOLDER}/siebel-json.log</file>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_FOLDER}/archived/siebel-json.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <!-- each archived file, size max 10MB -->
+      <maxFileSize>10MB</maxFileSize>
+      <!-- total size of all archive files, if total size > 3GB, it will delete old archived file -->
+      <totalSizeCap>3GB</totalSizeCap>
+      <!-- 60 days to keep -->
+      <maxHistory>60</maxHistory>
+    </rollingPolicy>
+  </appender>
+
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <!-- encoders are assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
@@ -8,6 +29,8 @@
       <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
+
+  <logger name="org.zalando.logbook" level="TRACE"/>
 
   <root level="ERROR">
     <appender-ref ref="STDOUT"/>

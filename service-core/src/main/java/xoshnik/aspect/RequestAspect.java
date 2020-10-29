@@ -17,8 +17,6 @@ import xoshnik.service.XmlConverter;
 @RequiredArgsConstructor
 public class RequestAspect {
 
-	private final RequestContext requestContext;
-
 	private final XmlConverter xmlConverter;
 
 	@Pointcut("within(@org.springframework.stereotype.Controller *)")
@@ -40,7 +38,6 @@ public class RequestAspect {
 				dto.setContent(new String(Base64.decodeBase64(dto.getContent()), StandardCharsets.UTF_8));
 				dto.setPropertySet(xmlConverter
 						.convertToPropSet(dto.getContent()));
-				requestContext.setSiebelDTO(dto);
 			}
 		}
 		Object result = pjp.proceed();
