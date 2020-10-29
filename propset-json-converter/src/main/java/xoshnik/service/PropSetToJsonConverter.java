@@ -4,9 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.siebel.data.SiebelPropertySet;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
+import java.util.stream.Stream;
 import org.springframework.stereotype.Service;
 import xoshnik.enums.PsComponent;
 import xoshnik.exception.ConverterException;
@@ -16,61 +14,67 @@ public class PropSetToJsonConverter {
 
 	public SiebelPropertySet process(SiebelPropertySet input) {
 		if (input != null) {
+			JsonObject myJSON = convertPropSetToJson(input);
 			SiebelPropertySet output = new SiebelPropertySet();
-			JsonObject myJSON = traversePS(input);
 			output.setProperty("JSON", myJSON.toString());
 			return output;
 		}
 		throw new ConverterException("PropertySet is not provided");
 	}
 
-
-	private static JsonObject traversePS(SiebelPropertySet ps) {
+	private JsonObject convertPropSetToJson(SiebelPropertySet ps) {
 		JsonObject siebJSON = new JsonObject();
-
-		String propVal;
-		for (String propName = ps.getFirstProperty(); !propName.equals(""); propName = ps.getNextProperty()) {
-			propVal = ps.getProperty(propName);
-			siebJSON.addProperty(propName, propVal);
-		}
+		addPropertiesToJson(ps, siebJSON);
 		for (int i = 0; i < ps.getChildCount(); ++i) {
-			if (ps.getChild(i).getType().endsWith("_set")) {
-				ps.getChild(i).setType(ps.getChild(i).getType().substring(0, ps.getChild(i).getType().length() - 4));
-			}
-			JsonArray ja;
-			if (ps.getChild(i).getType().startsWith(PsComponent.LIST_OF + PsComponent.OBJECT_LIST)) {
-				ja = new JsonArray();
-				for (int o = 0; o < ps.getChild(i).getChildCount(); ++o) {
-					ja.add(traversePS(ps.getChild(i).getChild(o)));
-				}
-				siebJSON.add(ps.getChild(i).getType().substring((PsComponent.LIST_OF + PsComponent.OBJECT_LIST).length()), ja);
-			} else if (!ps.getChild(i).getType().startsWith(PsComponent.PRIMITIVE_LIST)) {
-				if (ps.getChild(i).getType().startsWith(PsComponent.LIST_OF) && !ps.getChild(i).getType()
-						.startsWith(PsComponent.LIST_OF + PsComponent.OBJECT_LIST)) {
+			SiebelPropertySet child = ps.getChild(i);
+			applyCrutch(child);
+			String childType = child.getType();
+			if (childType.startsWith(PsComponent.LIST_OF + PsComponent.OBJECT_LIST)) {
+				processListOfObjectList(siebJSON, child);
+			} else if (childType.startsWith(PsComponent.PRIMITIVE_LIST)) {
+				siebJSON.add(
+						childType.substring(PsComponent.PRIMITIVE_LIST.length()),
+						addPrimitivesToJson(child, new JsonArray())
+				);
+			} else if (childType.startsWith(PsComponent.LIST_OF)) {
 					siebJSON.add(
-							ps.getChild(i).getType().substring(PsComponent.LIST_OF.length()),
-							traversePS(ps.getChild(i).getChild(0))
+							childType.substring(PsComponent.LIST_OF.length()),
+							convertPropSetToJson(child.getChild(0))
 					);
 				} else {
-					siebJSON.add(ps.getChild(i).getType(), traversePS(ps.getChild(i)));
+				siebJSON.add(childType, convertPropSetToJson(child));
 				}
-			} else {
-				ja = new JsonArray();
-				SiebelPropertySet auxps = ps.getChild(i);
-				Enumeration e = auxps.getPropertyNames();
-				List list = Collections.list(e);
-				Collections.sort(list);
-				e = Collections.enumeration(list);
-				while (e.hasMoreElements()) {
-					String propName1 = (String) e.nextElement();
-					propVal = auxps.getProperty(propName1);
-					ja.add(new JsonPrimitive(propVal));
-				}
-				siebJSON.add(auxps.getType().substring(PsComponent.PRIMITIVE_LIST.length()), ja);
-			}
 		}
-
 		return siebJSON;
+	}
+
+	private void processListOfObjectList(JsonObject siebJSON, SiebelPropertySet child) {
+		JsonArray jsonArray = new JsonArray();
+		for (int i = 0; i < child.getChildCount(); ++i) {
+			jsonArray.add(convertPropSetToJson(child.getChild(i)));
+		}
+		siebJSON.add(child.getType().substring((PsComponent.LIST_OF + PsComponent.OBJECT_LIST).length()), jsonArray);
+	}
+
+	private void applyCrutch(SiebelPropertySet child) {
+		if (child.getType().endsWith("_set")) {
+			child.setType(child.getType().substring(0, child.getType().length() - 4));
+		}
+	}
+
+	private JsonObject addPropertiesToJson(SiebelPropertySet ps, JsonObject jsonObject) {
+		getPropertiesAsStream(ps).forEach(propName -> jsonObject.addProperty(propName, ps.getProperty(propName)));
+		return jsonObject;
+	}
+
+	private JsonArray addPrimitivesToJson(SiebelPropertySet ps, JsonArray jsonArray) {
+		getPropertiesAsStream(ps).forEach(propName -> jsonArray.add(new JsonPrimitive(ps.getProperty(propName))));
+		return jsonArray;
+	}
+
+	private Stream<String> getPropertiesAsStream(SiebelPropertySet ps) {
+		return Stream.concat(Stream.of(ps.getFirstProperty()), Stream.generate(ps::getNextProperty))
+				.limit(ps.getPropertyCount());
 	}
 
 }
