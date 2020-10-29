@@ -1,5 +1,8 @@
 package xoshnik;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Objects;
+import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,25 +36,35 @@ public class ConverterControllerTest {
 	}
 
 	@Test
-	public void testUserController() throws Exception {
+	public void testPropSetToJson() throws Exception {
+		testUserController("/proptojson", "xml/proptojson.xml");
+	}
 
+	@Test
+	public void testJsonToPropSet() throws Exception {
+		testUserController("/jsontoprop", "xml/jsontoprop.xml");
+	}
+
+	private void testUserController(String method, String file) throws Exception {
 		MockHttpServletRequestBuilder builder =
-				MockMvcRequestBuilders.post("/json")
+				MockMvcRequestBuilders.post(method)
 						.contentType(MediaType.APPLICATION_XML)
-						.content(createUserInXml(
-						));
+						.content(getXmlFromResource(file));
 
 		this.mockMvc.perform(builder)
 				.andExpect(MockMvcResultMatchers.status()
-						.isOk());
+						.isOk()).andExpect(mvcResult -> {
+			String contentAsString = mvcResult.getResponse().getContentAsString();
+			if (!(!contentAsString.equals("") && contentAsString.contains("errorCode=\"0\""))) {
+				throw new RuntimeException("Incorrect response");
+			}
+		});
 	}
 
-	private static String createUserInXml() {
-		return "<SiebelDTO>" +
-				"<errorCode>" + 0 + "</errorCode>" +
-				"<errorMessage>" + 0 + "</errorMessage>" +
-				"<identifier>" + 0 + "</identifier>" +
-				"<value>" + 0 + "</value>" +
-				"</SiebelDTO>";
+	private String getXmlFromResource(String filePath) {
+		return new Scanner(
+				Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(filePath)),
+				StandardCharsets.UTF_8
+		).useDelimiter("\\A").next();
 	}
 }

@@ -1,0 +1,71 @@
+{
+  "TopElement": {
+    "id": "id",
+    "value": "File",
+    "status": "true",
+    "blank": "",
+    "statuses": [
+      "false",
+      "true"
+    ],
+    "GlossSeeAlso": [
+      "1.0",
+      "2",
+      "3.0"
+    ],
+    "popup": {
+      "menuitem": [
+        {
+          "value": "New",
+          "onclick": "CreateNewDoc()",
+          "GlossSeeAlso": [
+            "GML1",
+            "XML1"
+          ]
+        },
+        {
+          "value": "Open",
+          "onclick": "OpenDoc()",
+          "GlossSeeAlso": [
+            "GML2",
+            "XML2"
+          ]
+        },
+        {
+          "value": "Close",
+          "onclick": "CloseDoc()",
+          "GlossSeeAlso": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "menuitem2": [
+        {
+          "value": "New",
+          "onclick": "CreateNewDoc()",
+          "GlossSeeAlso": [
+            "GML1",
+            "XML1"
+          ]
+        },
+        {
+          "value": "Open",
+          "onclick": "OpenDoc()",
+          "GlossSeeAlso": [
+            "GML2",
+            "XML2"
+          ]
+        },
+        {
+          "value": "Close",
+          "onclick": "CloseDoc()",
+          "GlossSeeAlso": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    }
+  }
+}

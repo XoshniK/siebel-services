@@ -1,0 +1,64 @@
+{
+  "type" : "list",
+  "items" : [ {
+    "id" : "rt-58832adc-96e6-4aeb-9bac-45c31adc81c2",
+    "type" : "refund",
+    "status" : "succeeded",
+    "payment_id" : "2717fd29-000f-5000-8000-1f59bbb6c83e",
+    "fiscal_document_number" : "364555904",
+    "fiscal_storage_number" : "9286000100001341",
+    "fiscal_attribute" : "4177365941",
+    "registered_at" : "2020-10-20T17:54:02.000Z",
+    "fiscal_provider_id" : "5ea5c5ae3b9bc31022d928a8a376a4789d9453b82c61b780bd2ecdb3962c646e",
+    "items" : [ {
+      "quantity" : "2.000",
+      "amount" : {
+        "value" : "25.00",
+        "currency" : "RUB"
+      },
+      "vat_code" : "2",
+      "description" : "Наименование товара 1",
+      "payment_subject" : "commodity"
+    }, {
+      "quantity" : "1.000",
+      "amount" : {
+        "value" : "50.00",
+        "currency" : "RUB"
+      },
+      "vat_code" : "2",
+      "description" : "Наименование товара 2",
+      "payment_mode" : "full_payment",
+      "payment_subject" : "commodity"
+    } ]
+  }, {
+    "id" : "rt-2dc695f9-99bc-4eff-afed-d81fda96f007",
+    "type" : "payment",
+    "status" : "succeeded",
+    "payment_id" : "2717fd29-000f-5000-8000-1f59bbb6c83e",
+    "fiscal_document_number" : "133915937",
+    "fiscal_storage_number" : "9286000100001341",
+    "fiscal_attribute" : "6368025747",
+    "registered_at" : "2020-10-13T17:54:01.000Z",
+    "fiscal_provider_id" : "77499a9e223cbf0f27cb8ed61a69785656b9c23f0d9d848877c347640c2b9836",
+    "items" : [ {
+      "quantity" : "2.000",
+      "amount" : {
+        "value" : "25.00",
+        "currency" : "RUB"
+      },
+      "vat_code" : "2",
+      "description" : "Наименование товара 1",
+      "payment_subject" : "commodity"
+    }, {
+      "quantity" : "1.000",
+      "amount" : {
+        "value" : "50.00",
+        "currency" : "RUB"
+      },
+      "vat_code" : "2",
+      "description" : "Наименование товара 2",
+      "payment_mode" : "full_payment",
+      "payment_subject" : "commodity"
+    } ]
+  } ]
+}
