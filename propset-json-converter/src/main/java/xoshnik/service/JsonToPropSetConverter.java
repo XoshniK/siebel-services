@@ -16,57 +16,61 @@ public class JsonToPropSetConverter {
 	public SiebelPropertySet process(SiebelPropertySet input) {
 		String json = input.getProperty("JSON");
 		if (json != null) {
-			JsonObject obj = new Gson().fromJson(json, JsonObject.class);
-			return jsonObjectToPropertySet(obj, new SiebelPropertySet());
+			return processJsonObject(new Gson().fromJson(json, JsonObject.class), new SiebelPropertySet());
 		}
 		throw new ConverterException("JSON is not provided");
 	}
 
-	private static SiebelPropertySet jsonObjectToPropertySet(JsonObject jsonObj, SiebelPropertySet ps) {
-		for (Entry mapEntry : jsonObj.entrySet()) {
-			if (mapEntry != null) {
-				JsonElement jsonelement = (JsonElement) mapEntry.getValue();
-				SiebelPropertySet child;
-				if (jsonelement.isJsonArray()) {
-					JsonArray jsonArray = jsonelement.getAsJsonArray();
-					child = new SiebelPropertySet();
-					if (jsonArray.size() > 0 && jsonArray.get(0).isJsonPrimitive()) {
-						child.setType(PsComponent.PRIMITIVE_LIST + mapEntry.getKey().toString());
-					} else {
-						child.setType(PsComponent.LIST_OF + PsComponent.OBJECT_LIST + mapEntry.getKey().toString());
-					}
-
-					for (int i = 0; i < jsonArray.size(); ++i) {
-						if (jsonArray.get(i).isJsonPrimitive()) {
-							child.setProperty(String.valueOf(i), jsonArray.get(i).getAsString());
-						} else {
-							SiebelPropertySet temp = new SiebelPropertySet();
-							temp.setType(PsComponent.OBJECT_LIST + mapEntry.getKey().toString());
-							if (jsonArray.get(i).isJsonObject()) {
-								child.addChild(jsonObjectToPropertySet(jsonArray.get(i).getAsJsonObject(), temp));
-							} else {
-								JsonObject aux = new JsonObject();
-								aux.add(String.valueOf(i), jsonArray.get(i));
-								child.addChild(jsonObjectToPropertySet(aux, temp));
-							}
-						}
-					}
-					ps.addChild(child);
-				} else if (jsonelement.isJsonObject()) {
-					JsonObject jsonObject = jsonelement.getAsJsonObject();
-					child = new SiebelPropertySet();
-					child.setType(mapEntry.getKey().toString());
-					ps.addChild(jsonObjectToPropertySet(jsonObject, child));
-				} else {
-					ps.setProperty(mapEntry.getKey().toString(), removeQuotes(mapEntry.getValue().toString()));
-				}
+	private SiebelPropertySet processJsonObject(JsonObject jsonObj, SiebelPropertySet ps) {
+		for (Entry<String, JsonElement> mapEntry : jsonObj.entrySet()) {
+			String jsonKey = mapEntry.getKey();
+			JsonElement jsonElement = mapEntry.getValue();
+			if (jsonElement.isJsonArray()) {
+				processJsonArray(jsonKey, jsonElement.getAsJsonArray(), ps);
+			} else if (jsonElement.isJsonObject()) {
+				SiebelPropertySet child = new SiebelPropertySet();
+				child.setType(jsonKey);
+				ps.addChild(processJsonObject(jsonElement.getAsJsonObject(), child));
+			} else {
+				processPrimitives(jsonKey, jsonElement, ps);
 			}
 		}
-
 		return ps;
 	}
 
-	private static String removeQuotes(String inputString) {
+	private void processJsonArray(String jsonKey, JsonArray jsonArray, SiebelPropertySet ps) {
+		SiebelPropertySet child = new SiebelPropertySet();
+		for (int i = 0; i < jsonArray.size(); ++i) {
+			JsonElement jsonElement = jsonArray.get(i);
+			if (i == 0) {
+				if (jsonElement.isJsonPrimitive()) {
+					child.setType(PsComponent.PRIMITIVE_LIST + jsonKey);
+				} else {
+					child.setType(PsComponent.LIST_OF + PsComponent.OBJECT_LIST + jsonKey);
+				}
+			}
+			if (jsonElement.isJsonPrimitive()) {
+				child.setProperty(String.valueOf(i), jsonElement.getAsString());
+			} else {
+				SiebelPropertySet temp = new SiebelPropertySet();
+				temp.setType(PsComponent.OBJECT_LIST + jsonKey);
+				if (jsonElement.isJsonObject()) {
+					child.addChild(processJsonObject(jsonElement.getAsJsonObject(), temp));
+				} else {
+					JsonObject aux = new JsonObject();
+					aux.add(String.valueOf(i), jsonElement);
+					child.addChild(processJsonObject(aux, temp));
+				}
+			}
+		}
+		ps.addChild(child);
+	}
+
+	private void processPrimitives(String jsonKey, JsonElement jsonElement, SiebelPropertySet ps) {
+		ps.setProperty(jsonKey, removeQuotes(jsonElement.toString()));
+	}
+
+	private String removeQuotes(String inputString) {
 		if (inputString.charAt(0) == '\"' && inputString.charAt(inputString.length() - 1) == '\"'
 				|| inputString.charAt(0) == '\'' && inputString.charAt(inputString.length() - 1) == '\'') {
 			return inputString.substring(1, inputString.length() - 1);
