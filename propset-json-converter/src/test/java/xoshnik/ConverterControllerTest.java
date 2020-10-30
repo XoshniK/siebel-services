@@ -1,8 +1,10 @@
 package xoshnik;
 
-import java.nio.charset.StandardCharsets;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Objects;
-import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -61,10 +63,8 @@ public class ConverterControllerTest {
 		});
 	}
 
-	private String getXmlFromResource(String filePath) {
-		return new Scanner(
-				Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(filePath)),
-				StandardCharsets.UTF_8
-		).useDelimiter("\\A").next();
+	private String getXmlFromResource(String filePath) throws URISyntaxException, IOException {
+		return new String(Files.readAllBytes(Paths.get(Objects
+				.requireNonNull(getClass().getClassLoader().getResource(filePath)).toURI())));
 	}
 }

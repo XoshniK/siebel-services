@@ -6,7 +6,11 @@ import com.google.gson.JsonObject;
 import com.siebel.data.SiebelPropertySet;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Objects;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -14,6 +18,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import xoshnik.exception.ConverterException;
 import xoshnik.service.JsonToPropSetConverter;
 import xoshnik.service.PropSetToJsonConverter;
 
@@ -30,36 +35,36 @@ public class ConverterTest {
 	private PropSetToJsonConverter propSetToJsonConverter;
 
 	@Test
-	public void glossary() {
+	public void glossary() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/glossary.json");
 	}
 
 	@Test
-	public void menu() {
+	public void menu() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/menu.json");
 	}
 
 	@Test
-	public void widget() {
+	public void widget() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/widget.json");
 	}
 
 	@Test
-	public void webApp() {
+	public void webApp() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/webapp.json");
 	}
 
 	@Test
-	public void test() {
+	public void test() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/test.json");
 	}
 
 	@Test
-	public void yandex() {
+	public void yandex() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/yandex.json");
 	}
 
-	private void testJSON(String fileName) {
+	private void testJSON(String fileName) throws ConverterException, IOException, URISyntaxException {
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		JsonObject origJSON = getJsonFromResourceAsPS(fileName, gson);
 
@@ -84,24 +89,10 @@ public class ConverterTest {
 		return siebelPropertySet;
 	}
 
-	private JsonObject getJsonFromResourceAsPS(String filePath, Gson gson) {
-		JsonObject jsonObject = null;
-		try {
-			FileReader fileInputStream = null;
-			URL resource = this.getClass().getClassLoader().getResource(filePath);
-			if (resource != null) {
-				fileInputStream = new FileReader(resource.getFile());
-			}
-			if (fileInputStream != null) {
-				jsonObject = gson.fromJson(
-						fileInputStream,
-						JsonObject.class
-				);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return jsonObject;
+	private JsonObject getJsonFromResourceAsPS(String filePath, Gson gson) throws URISyntaxException, IOException {
+		String json = new String(Files.readAllBytes(Paths.get(Objects
+				.requireNonNull(getClass().getClassLoader().getResource(filePath)).toURI())));
+		return gson.fromJson(json, JsonObject.class);
 	}
 
 }

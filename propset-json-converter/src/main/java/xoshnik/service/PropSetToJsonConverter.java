@@ -12,7 +12,7 @@ import xoshnik.exception.ConverterException;
 @Service
 public class PropSetToJsonConverter {
 
-	public SiebelPropertySet process(SiebelPropertySet input) {
+	public SiebelPropertySet process(SiebelPropertySet input) throws ConverterException {
 		if (input != null) {
 			JsonObject myJSON = convertPropSetToJson(input);
 			SiebelPropertySet output = new SiebelPropertySet();

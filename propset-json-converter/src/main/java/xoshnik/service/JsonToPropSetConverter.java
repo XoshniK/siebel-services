@@ -13,7 +13,7 @@ import xoshnik.exception.ConverterException;
 @Service
 public class JsonToPropSetConverter {
 
-	public SiebelPropertySet process(SiebelPropertySet input) {
+	public SiebelPropertySet process(SiebelPropertySet input) throws ConverterException {
 		String json = input.getProperty("JSON");
 		if (json != null) {
 			return processJsonObject(new Gson().fromJson(json, JsonObject.class), new SiebelPropertySet());

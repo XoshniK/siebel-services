@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import xoshnik.dto.SiebelDTO;
+import xoshnik.exception.ConverterException;
 import xoshnik.service.JsonToPropSetConverter;
 import xoshnik.service.PropSetToJsonConverter;
 
@@ -20,7 +21,7 @@ public class ConverterController {
 	private final PropSetToJsonConverter propSetToJsonConverter;
 
 	@PostMapping(value = "jsontoprop")
-	public SiebelDTO convertJsonToPropertySet(@RequestBody SiebelDTO dto) {
+	public SiebelDTO convertJsonToPropertySet(@RequestBody SiebelDTO dto) throws ConverterException {
 		SiebelPropertySet output = jsonToPropSetConverter.process(dto.getPropertySet());
 		return SiebelDTO.builder().errorCode("0").errorMessage("").requestIdentifier(dto.getRequestIdentifier())
 				.propertySet(output)
@@ -28,7 +29,7 @@ public class ConverterController {
 	}
 
 	@PostMapping(value = "proptojson")
-	public SiebelDTO convertPropertySetToJson(@RequestBody SiebelDTO dto) {
+	public SiebelDTO convertPropertySetToJson(@RequestBody SiebelDTO dto) throws ConverterException {
 		SiebelPropertySet output = propSetToJsonConverter.process(dto.getPropertySet());
 		return SiebelDTO.builder().errorCode("0").errorMessage("").requestIdentifier(dto.getRequestIdentifier())
 				.propertySet(output)
