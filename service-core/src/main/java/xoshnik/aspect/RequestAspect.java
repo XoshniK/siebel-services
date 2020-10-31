@@ -1,9 +1,9 @@
 package xoshnik.aspect;
 
-import java.nio.charset.StandardCharsets;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.binary.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -35,7 +35,7 @@ public class RequestAspect {
 		for (Object arg : pjp.getArgs()) {
 			if (arg instanceof SiebelDTO) {
 				SiebelDTO dto = (SiebelDTO) arg;
-				dto.setContent(new String(Base64.decodeBase64(dto.getContent()), StandardCharsets.UTF_8));
+				dto.setContent(StringUtils.newStringUtf8(Base64.decodeBase64(dto.getContent())));
 				dto.setPropertySet(xmlConverter
 						.convertToPropSet(dto.getContent()));
 			}
@@ -44,9 +44,7 @@ public class RequestAspect {
 		if (result instanceof SiebelDTO) {
 			SiebelDTO dto = (SiebelDTO) result;
 			dto.setContent(Base64
-					.encodeBase64String("<?xml version=\"1.0\" encoding=\"UTF-16\"?><?Siebel-Property-Set EscapeNames=\"true\"?>"
-							.concat(xmlConverter.convertToXml(dto.getPropertySet())).getBytes(StandardCharsets.UTF_8)))
-			;
+					.encodeBase64String(StringUtils.getBytesUtf8(xmlConverter.convertToXml(dto.getPropertySet()))));
 			return dto;
 		}
 		return null;
