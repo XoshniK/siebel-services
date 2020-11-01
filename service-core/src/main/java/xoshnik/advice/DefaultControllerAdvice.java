@@ -18,7 +18,7 @@ public class DefaultControllerAdvice {
 	@ExceptionHandler({Exception.class})
 	@ResponseStatus(value = HttpStatus.OK)
 	public @ResponseBody
-	SiebelDTO runtimeExceptionHandler(RuntimeException ex) {
+	SiebelDTO runtimeExceptionHandler(Exception ex) {
 		UUID uuid = UUID.randomUUID();
 		String errorMessage = ex.getLocalizedMessage() + "; ErrorId = " + uuid;
 
