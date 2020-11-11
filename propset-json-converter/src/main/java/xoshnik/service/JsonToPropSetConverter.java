@@ -40,14 +40,11 @@ public class JsonToPropSetConverter {
 
 	private void processJsonArray(String jsonKey, JsonArray jsonArray, SiebelPropertySet ps) {
 		SiebelPropertySet child = new SiebelPropertySet();
+		child.setType(PsComponent.PRIMITIVE_LIST + jsonKey);
 		for (int i = 0; i < jsonArray.size(); ++i) {
 			JsonElement jsonElement = jsonArray.get(i);
-			if (i == 0) {
-				if (jsonElement.isJsonPrimitive()) {
-					child.setType(PsComponent.PRIMITIVE_LIST + jsonKey);
-				} else {
+			if (i == 0 && !jsonElement.isJsonPrimitive()) {
 					child.setType(PsComponent.LIST_OF + PsComponent.OBJECT_LIST + jsonKey);
-				}
 			}
 			if (jsonElement.isJsonPrimitive()) {
 				child.setProperty(String.valueOf(i), jsonElement.getAsString());

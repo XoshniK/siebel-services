@@ -4,10 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.siebel.data.SiebelPropertySet;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Objects;
@@ -62,6 +60,11 @@ public class ConverterTest {
 	@Test
 	public void yandex() throws ConverterException, IOException, URISyntaxException {
 		testJSON("json/yandex.json");
+	}
+
+	@Test
+	public void emptyArray() throws ConverterException, IOException, URISyntaxException {
+		testJSON("json/emptyArray.json");
 	}
 
 	private void testJSON(String fileName) throws ConverterException, IOException, URISyntaxException {
