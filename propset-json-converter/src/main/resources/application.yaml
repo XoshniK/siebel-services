@@ -1,9 +1,17 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
 
 logbook:
   filter:
-    enabled: true
+    enabled: ${LOGBOOK_FILTER_ENABLED:true}
   format:
     style: json
   include: /**
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL_ROOT:ERROR}
+
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:default}
