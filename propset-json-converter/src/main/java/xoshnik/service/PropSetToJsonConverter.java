@@ -4,13 +4,16 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.siebel.data.SiebelPropertySet;
-import java.util.stream.Stream;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import xoshnik.enums.PsComponent;
 import xoshnik.exception.ConverterException;
 
 @Service
+@RequiredArgsConstructor
 public class PropSetToJsonConverter {
+
+	private final PropertySetUtils propertySetUtils;
 
 	public SiebelPropertySet process(SiebelPropertySet input) throws ConverterException {
 		if (input != null) {
@@ -63,18 +66,13 @@ public class PropSetToJsonConverter {
 	}
 
 	private JsonObject addPropertiesToJson(SiebelPropertySet ps, JsonObject jsonObject) {
-		getPropertiesAsStream(ps).forEach(propName -> jsonObject.addProperty(propName, ps.getProperty(propName)));
+		propertySetUtils.getPropertyNamesAsStream(ps).forEach(propName -> jsonObject.addProperty(propName, ps.getProperty(propName)));
 		return jsonObject;
 	}
 
 	private JsonArray addPrimitivesToJson(SiebelPropertySet ps, JsonArray jsonArray) {
-		getPropertiesAsStream(ps).forEach(propName -> jsonArray.add(new JsonPrimitive(ps.getProperty(propName))));
+		propertySetUtils.getPropertyNamesAsStream(ps).forEach(propName -> jsonArray.add(new JsonPrimitive(ps.getProperty(propName))));
 		return jsonArray;
-	}
-
-	private Stream<String> getPropertiesAsStream(SiebelPropertySet ps) {
-		return Stream.concat(Stream.of(ps.getFirstProperty()), Stream.generate(ps::getNextProperty))
-				.limit(ps.getPropertyCount());
 	}
 
 }
