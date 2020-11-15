@@ -7,22 +7,13 @@ import com.siebel.data.SiebelPropertySet;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import xoshnik.service.PropertySetUtils;
 
 @Slf4j
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
 @NoArgsConstructor
-@ContextConfiguration(classes = PropertySetUtils.class)
 public class PropertySetUtilsTest {
 
-	@Autowired
-	private PropertySetUtils propertySetUtils;
+	private PropertySetUtils propertySetUtils = new PropertySetUtils();
 
 	@Test
 	public void compareEmptyPS() {

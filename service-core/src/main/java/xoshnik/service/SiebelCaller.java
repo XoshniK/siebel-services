@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.xml.transform.TransformerException;
-import lombok.RequiredArgsConstructor;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,13 +19,16 @@ import xoshnik.exception.UrlNotSpecifiedException;
 
 
 @Service
-@RequiredArgsConstructor
 public class SiebelCaller {
 
 	private final XmlConverter xmlConverter;
 
-	@Value("${siebel.url:}")
-	private String siebelURL;
+	private final String siebelURL;
+
+	public SiebelCaller(XmlConverter xmlConverter, @Value("${siebel.url:}") String siebelURL) {
+		this.xmlConverter = xmlConverter;
+		this.siebelURL = siebelURL;
+	}
 
 	public SiebelPropertySet invokeWorkflow(String processName, SiebelPropertySet inputPS)
 			throws TransformerException, IOException, SAXException {

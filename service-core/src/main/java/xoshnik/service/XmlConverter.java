@@ -35,7 +35,7 @@ public class XmlConverter {
 	private Transformer transformer;
 
 	@PostConstruct
-	private void init() throws ParserConfigurationException, TransformerConfigurationException {
+	public void init() throws ParserConfigurationException, TransformerConfigurationException {
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		String feature = "http://apache.org/xml/features/disallow-doctype-decl";
 		documentBuilderFactory.setFeature(feature, true);

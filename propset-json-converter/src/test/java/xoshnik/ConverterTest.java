@@ -12,25 +12,18 @@ import java.util.Objects;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import xoshnik.exception.ConverterException;
 import xoshnik.service.JsonToPropSetConverter;
 import xoshnik.service.PropSetToJsonConverter;
+import xoshnik.service.PropertySetUtils;
 
 @Slf4j
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
 @NoArgsConstructor
 public class ConverterTest {
 
-	@Autowired
-	private JsonToPropSetConverter jsonToPropSetConverter;
+	private final JsonToPropSetConverter jsonToPropSetConverter = new JsonToPropSetConverter();
 
-	@Autowired
-	private PropSetToJsonConverter propSetToJsonConverter;
+	private final PropSetToJsonConverter propSetToJsonConverter = new PropSetToJsonConverter(new PropertySetUtils());
 
 	@Test
 	public void glossary() throws ConverterException, IOException, URISyntaxException {
