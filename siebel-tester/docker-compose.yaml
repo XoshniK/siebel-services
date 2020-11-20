@@ -1,0 +1,13 @@
+#  docker-compose -f docker-compose.yaml up --build --force-recreate -d
+version: '3'
+services:
+  allure:
+    image: "frankescobar/allure-docker-service"
+    environment:
+      CHECK_RESULTS_EVERY_SECONDS: 1
+      KEEP_HISTORY: 1
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./target/allure-results:/app/allure-results
+      - ./target/allure-reports:/app/default-reports

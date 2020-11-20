@@ -46,6 +46,7 @@ public class SiebelCaller {
 		if (org.springframework.util.StringUtils.isEmpty(siebelURL)) {
 			throw new UrlNotSpecifiedException("Specify Siebel URL in \"siebel.url\" property");
 		}
+		inputPS.setType("Input");
 		String requestXML = xmlConverter.convertToXml(inputPS);
 		byte[] requestEncoded = StringUtils.getBytesUtf8(requestXML);
 		String requestBase64 = Base64.encodeBase64String(requestEncoded);

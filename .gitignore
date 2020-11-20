@@ -1,3 +1,4 @@
 /.idea
 target/
 /siebel-services.iml
+.allure
