@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   NAME="Siebel Repository"
+   UPDATED="11/18/2020 02:26:45"
+   UPDATED_BY="SADMIN"
+   CREATED="03/31/2020 21:36:37"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="RUS"
+	   LOCKED="Y"
+	   LOCKED_DATE="01/15/2021 12:21:14"
+	   NAME="DummyProject"
+	   UI_FREEZE="N"
+	   LOCKED_BY_NAME="SADMIN"
+	   UPDATED="01/15/2021 12:50:41"
+	   UPDATED_BY="SADMIN"
+	   CREATED="08/30/2018 18:08:07"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="N"
+		   CLASS="CSSService"
+		   EXTERNAL_USE="N"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="SiebelServices Inbound Invoker"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED="11/13/2020 23:39:02"
+		   UPDATED_BY="SADMIN"
+		   CREATED="11/12/2020 11:24:14"
+		   CREATED_BY="SADMIN">
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="InvokeBS"
+			   UPDATED="11/12/2020 11:47:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="11/12/2020 11:45:06"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="Result"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/12/2020 11:47:28"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/12/2020 11:47:15"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ServiceMethod"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="11/12/2020 11:45:47"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/12/2020 11:45:41"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ServiceName"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input"
+				   UPDATED="11/12/2020 11:45:36"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/12/2020 11:45:33"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ServiceParams"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/12/2020 11:47:12"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/12/2020 11:45:49"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="InvokeBS"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="RUS"
+				   NAME="RUS-STD"
+				   TRANSLATE="Y"
+				   UPDATED="11/12/2020 11:45:30"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/12/2020 11:45:30"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="(declarations)"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="//Your public declarations go here...  
+"
+			   SEQUENCE="1"
+			   UPDATED="11/13/2020 22:28:41"
+			   UPDATED_BY="SADMIN"
+			   CREATED="11/13/2020 22:28:41"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="InvokeBS"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function InvokeBS(Inputs:PropertySet, Outputs:PropertySet)
+{
+	try
+	{
+		var serviceName = Inputs.GetProperty(&quot;ServiceName&quot;);
+		var serviceMethod = Inputs.GetProperty(&quot;ServiceMethod&quot;);
+		var serviceParams = Inputs.GetChild(0).GetChild(0);
+		var service = TheApplication().GetService(serviceName);
+		var psOutput:PropertySet = TheApplication().NewPropertySet();
+		service.InvokeMethod(serviceMethod, serviceParams, psOutput);
+		psOutput.SetType(&quot;Result&quot;);
+		Outputs.AddChild(psOutput);
+	}
+	finally
+	{
+		serviceName=null;
+		serviceMethod=null;
+		serviceParams=null;
+		service=null;
+		psOutput=null;
+	}
+}"
+			   SEQUENCE="2"
+			   UPDATED="11/13/2020 23:39:02"
+			   UPDATED_BY="SADMIN"
+			   CREATED="11/12/2020 11:26:59"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreInvokeMethod (MethodName, Inputs:PropertySet, Outputs:PropertySet)
+{
+	switch(MethodName){
+		case &quot;InvokeBS&quot;:
+			InvokeBS(Inputs, Outputs);
+			return (CancelOperation);
+			break;
+	}
+
+	return (ContinueOperation);
+}"
+			   SEQUENCE="3"
+			   UPDATED="11/13/2020 22:40:00"
+			   UPDATED_BY="SADMIN"
+			   CREATED="11/12/2020 11:24:42"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
+
+
+

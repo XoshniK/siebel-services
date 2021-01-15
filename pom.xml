@@ -25,6 +25,7 @@
     <module>propset-json-converter</module>
     <module>service-core</module>
     <module>siebel-tester</module>
+    <module>json-soap-invoker</module>
   </modules>
 
   <dependencies>

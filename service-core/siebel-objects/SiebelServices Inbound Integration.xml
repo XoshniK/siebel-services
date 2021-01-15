@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SiebelMessage MessageId="" IntObjectName="Repository Workflow Definition Export V.7.7.1" MessageType="Integration Object" IntObjectFormat="Siebel Hierarchical">
+  <ListOfRepositoryWorkflowProcess>
+    <RepositoryWorkflowProcess>
+      <BusinessObject/>
+      <CacheLocale/>
+      <Comments/>
+      <Description/>
+      <EffectiveEndDate/>
+      <EffectiveStartDate/>
+      <ErrorProcessName/>
+      <Group/>
+      <Inactive>N</Inactive>
+      <Module/>
+      <Name>SiebelServices Inbound Integration: 0</Name>
+      <PersistentFrequency>N</PersistentFrequency>
+      <PersistentLevel/>
+      <ProcessName>SiebelServices Inbound Integration</ProcessName>
+      <ProjectName>DummyProject</ProjectName>
+      <ReplicationLevel>None</ReplicationLevel>
+      <Runnable>N</Runnable>
+      <Status>COMPLETED</Status>
+      <Version>0</Version>
+      <WorkflowMode>SRVFLOW</WorkflowMode>
+      <StateManagementType>STATEFUL</StateManagementType>
+      <PassByRefHierarchyArgument>N</PassByRefHierarchyArgument>
+      <WebServiceEnabled>N</WebServiceEnabled>
+      <ListOfRepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>PROPSET_CHILD</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Content</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>BINARY</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>EncodedContent</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Error Code</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Error Message</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Object Id</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Process Instance Id</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>PROPSET_CHILD</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>IN</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Request</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>PROPSET_CHILD</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>OUT</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Response</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>PROPSET_CHILD</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Result</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>ServiceMethod</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>ServiceName</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>PROPSET_CHILD</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>ServiceParams</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>VARCHAR</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>Siebel Operation Object Id</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>ALIAS</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString>Request/Input/@ServiceMethod</DefaultString>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>aServiceMethod</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>ALIAS</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString>Request/Input/@ServiceName</DefaultString>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>aServiceName</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>ALIAS</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString>Request/Input/@ServiceParams</DefaultString>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>aServiceParams</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+        <RepositoryWfProcessProp>
+          <AccessMode>RW</AccessMode>
+          <BusinessComponent/>
+          <Comments/>
+          <CorrelatorFlag>N</CorrelatorFlag>
+          <DataType>BINARY</DataType>
+          <DefaultDate/>
+          <DefaultNumber/>
+          <DefaultString/>
+          <DisplayName/>
+          <InOut>NONE</InOut>
+          <Inactive/>
+          <IntegrationObject/>
+          <Name2>bContent</Name2>
+          <VirtualField/>
+        </RepositoryWfProcessProp>
+      </ListOfRepositoryWfProcessProp>
+      <ListOfRepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>XMLDocToXMLHier</BusinessServiceMethod>
+          <BusinessServiceName>XML Hierarchy Converter</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*396 36 492 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Convert Content to Hier</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 3</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*516 604*NPts1*22*P06*492 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Invoke BS</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 2</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*444 1094*NPts1*42*P06*444 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>&lt;Value&gt;</Name2>
+              <OutputArg/>
+              <PropertyName>bContent</PropertyName>
+              <Sequence>7</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Convert Content to Hier8</Name2>
+              <OutputArg>XMLHierarchy</OutputArg>
+              <PropertyName>ServiceParams</PropertyName>
+              <Sequence>8</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>XMLHierToXMLDoc</BusinessServiceMethod>
+          <BusinessServiceName>XML Hierarchy Converter</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*756 36 852 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Convert Content to XML</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 6</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*876 604*NPts1*22*P06*852 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Encode Content</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 5</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*804 1094*NPts1*42*P06*804 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>EscapeNames</Name2>
+              <OutputArg/>
+              <PropertyName/>
+              <Sequence>12</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>false</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>XMLHierarchy</Name2>
+              <OutputArg/>
+              <PropertyName>Content</PropertyName>
+              <Sequence>13</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>Tags on Separate Lines</Name2>
+              <OutputArg/>
+              <PropertyName/>
+              <Sequence>14</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>false</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Convert Content to XML3</Name2>
+              <OutputArg>&lt;Value&gt;</OutputArg>
+              <PropertyName>bContent</PropertyName>
+              <Sequence>15</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*636 36 732 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Create Content</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 5</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*756 604*NPts1*22*P06*732 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Convert Content to XML</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 4</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*684 1094*NPts1*42*P06*684 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Create Content4</Name2>
+              <OutputArg>in</OutputArg>
+              <PropertyName>Content</PropertyName>
+              <Sequence>18</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ListOfContent.ErrorCode</Name2>
+              <OutputArg/>
+              <PropertyName/>
+              <Sequence>19</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>0</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ListOfContent.ErrorMessage</Name2>
+              <OutputArg/>
+              <PropertyName/>
+              <Sequence>20</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ListOfContent.Result</Name2>
+              <OutputArg/>
+              <PropertyName>Result</PropertyName>
+              <Sequence>98</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in</Name2>
+              <OutputArg/>
+              <PropertyName>Content</PropertyName>
+              <Sequence>99</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r14*996 36 1092 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Create XML Hier</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 8</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*1116 604*NPts1*22*P07*1092 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>End 0</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 7</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P18*1044 1094*NPts1*42*P07*1044 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in</Name2>
+              <OutputArg/>
+              <PropertyName>Response</PropertyName>
+              <Sequence>22</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ListOfSiebelDTO.content</Name2>
+              <OutputArg/>
+              <PropertyName>EncodedContent</PropertyName>
+              <Sequence>24</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Create XML Hier25</Name2>
+              <OutputArg>in</OutputArg>
+              <PropertyName>Response</PropertyName>
+              <Sequence>25</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>DecodeBase64</BusinessServiceMethod>
+          <BusinessServiceName>LS Clinical Utitlity Service</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*276 36 372 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Decode Content</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 2</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*396 604*NPts1*22*P06*372 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Convert Content to Hier</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 1</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*324 1094*NPts1*42*P06*324 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>InputEncodedData</Name2>
+              <OutputArg/>
+              <PropertyName>EncodedContent</PropertyName>
+              <Sequence>5</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Decode Content6</Name2>
+              <OutputArg>OutputDecodedData</OutputArg>
+              <PropertyName>bContent</PropertyName>
+              <Sequence>6</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>EncodeBase64</BusinessServiceMethod>
+          <BusinessServiceName>LS Clinical Utitlity Service</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*876 36 972 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Encode Content</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 7</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*996 604*NPts1*22*P06*972 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Create XML Hier</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 6</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*924 1094*NPts1*42*P06*924 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>InputData</Name2>
+              <OutputArg/>
+              <PropertyName>bContent</PropertyName>
+              <Sequence>19</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Encode Content2</Name2>
+              <OutputArg>OutputEncodedData</OutputArg>
+              <PropertyName>EncodedContent</PropertyName>
+              <Sequence>20</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod/>
+          <BusinessServiceName/>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*1116 36 1212 849*FillBgClr8*167641088*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>End 0</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>END</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch/>
+          <ListOfRepositoryWfStepIOArgument/>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>XMLHierToXMLDoc</BusinessServiceMethod>
+          <BusinessServiceName>XML Hierarchy Converter</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*756 144 852 1929*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Error Convert Content to XML</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Copy of Connector 6</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*876 1684*NPts1*22*P07*852 1684*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Error Encode Content</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>EscapeNames</Name2>
+              <OutputArg/>
+              <PropertyName/>
+              <Sequence>1</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>false</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>XMLHierarchy</Name2>
+              <OutputArg/>
+              <PropertyName>Content</PropertyName>
+              <Sequence>2</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>Tags on Separate Lines</Name2>
+              <OutputArg/>
+              <PropertyName/>
+              <Sequence>3</Sequence>
+              <Type>LITERAL</Type>
+              <ValueSearchSpecification>false</ValueSearchSpecification>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Error Convert Content to XML4</Name2>
+              <OutputArg>&lt;Value&gt;</OutputArg>
+              <PropertyName>bContent</PropertyName>
+              <Sequence>4</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*636 144 732 1929*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Error Create Content</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 11</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*756 1684*NPts1*22*P07*732 1684*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Error Convert Content to XML</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ListOfContent</Name2>
+              <OutputArg/>
+              <PropertyName>Result</PropertyName>
+              <Sequence>1</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in</Name2>
+              <OutputArg/>
+              <PropertyName>Content</PropertyName>
+              <Sequence>2</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Error Create Content3</Name2>
+              <OutputArg>in</OutputArg>
+              <PropertyName>Content</PropertyName>
+              <Sequence>3</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r16*996 144 1092 1929*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Error Create XML Hier</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 10</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*8*0*0*0*9*LineWidth1*22*P27*1164 844*FrHS1*22*P18*1164 1684*NPts1*32*P08*1092 1684*ToHS1*38*ArrowEnd1*4</Layout>
+              <ToStepName>End 0</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ListOfSiebelDTO.content</Name2>
+              <OutputArg/>
+              <PropertyName>EncodedContent</PropertyName>
+              <Sequence>5</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in</Name2>
+              <OutputArg/>
+              <PropertyName>Response</PropertyName>
+              <Sequence>6</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Error Create XML Hier7</Name2>
+              <OutputArg>in</OutputArg>
+              <PropertyName>Response</PropertyName>
+              <Sequence>7</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>EncodeBase64</BusinessServiceMethod>
+          <BusinessServiceName>LS Clinical Utitlity Service</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*876 144 972 1929*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Error Encode Content</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Copy of Connector 7</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*996 1684*NPts1*22*P07*972 1684*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Error Create XML Hier</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>InputData</Name2>
+              <OutputArg/>
+              <PropertyName>bContent</PropertyName>
+              <Sequence>8</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Error Encode Content9</Name2>
+              <OutputArg>OutputEncodedData</OutputArg>
+              <PropertyName>EncodedContent</PropertyName>
+              <Sequence>9</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*156 36 252 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Get params from Request</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 1</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*276 604*NPts1*22*P06*252 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Decode Content</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 0</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*204 1094*NPts1*42*P06*204 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in</Name2>
+              <OutputArg/>
+              <PropertyName>Request</PropertyName>
+              <Sequence>1</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Get params from Request2</Name2>
+              <OutputArg>serviceName</OutputArg>
+              <PropertyName>ServiceName</PropertyName>
+              <Sequence>2</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Get params from Request3</Name2>
+              <OutputArg>serviceMethod</OutputArg>
+              <PropertyName>ServiceMethod</PropertyName>
+              <Sequence>3</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Get params from Request4</Name2>
+              <OutputArg>serviceParams</OutputArg>
+              <PropertyName>EncodedContent</PropertyName>
+              <Sequence>4</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>serviceName</Name2>
+              <OutputArg/>
+              <PropertyName>aServiceName</PropertyName>
+              <Sequence>5</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>serviceMethod</Name2>
+              <OutputArg/>
+              <PropertyName>aServiceMethod</PropertyName>
+              <Sequence>6</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>serviceParams</Name2>
+              <OutputArg/>
+              <PropertyName>aServiceParams</PropertyName>
+              <Sequence>7</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>InvokeBS</BusinessServiceMethod>
+          <BusinessServiceName>SiebelServices Inbound Invoker</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r13*516 36 612 849*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Invoke BS</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 4</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*636 604*NPts1*22*P06*612 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Create Content</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Error Exception 3</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>ERROR_EXC</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*8*0*0*0*9*LineWidth1*24*FrHS1*32*P17*564 1444*NPts1*22*P06*564 844*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+              <ToStepName>Set Error</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>ServiceMethod</Name2>
+              <OutputArg/>
+              <PropertyName>ServiceMethod</PropertyName>
+              <Sequence>9</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>ServiceParams</Name2>
+              <OutputArg/>
+              <PropertyName>ServiceParams</PropertyName>
+              <Sequence>10</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>ServiceName</Name2>
+              <OutputArg/>
+              <PropertyName>ServiceName</PropertyName>
+              <Sequence>11</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Invoke BS210</Name2>
+              <OutputArg>Result</OutputArg>
+              <PropertyName>Result</PropertyName>
+              <Sequence>21</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod>Echo</BusinessServiceMethod>
+          <BusinessServiceName>Workflow Utilities</BusinessServiceName>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r15*516 144 612 1929*FillBgClr8*134217218*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Set Error</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>TASK</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 9</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>CONNECTOR</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*636 1684*NPts1*22*P07*612 1684*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Error Create Content</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in</Name2>
+              <OutputArg/>
+              <PropertyName>Result</PropertyName>
+              <Sequence>1</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>O</InputFlag>
+              <ItemTypeName/>
+              <Name2>O:Set Error3</Name2>
+              <OutputArg>in</OutputArg>
+              <PropertyName>Result</PropertyName>
+              <Sequence>3</Sequence>
+              <Type>ARGUMENT</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ErrorMessage</Name2>
+              <OutputArg/>
+              <PropertyName>Error Message</PropertyName>
+              <Sequence>4</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+            <RepositoryWfStepIOArgument>
+              <BusinessComponent/>
+              <BusinessComponentField/>
+              <Comments/>
+              <Inactive>N</Inactive>
+              <InputFlag>I</InputFlag>
+              <ItemTypeName/>
+              <Name2>in.ErrorCode</Name2>
+              <OutputArg/>
+              <PropertyName>Error Code</PropertyName>
+              <Sequence>5</Sequence>
+              <Type>PROPERTY</Type>
+              <ValueSearchSpecification/>
+            </RepositoryWfStepIOArgument>
+          </ListOfRepositoryWfStepIOArgument>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+        <RepositoryWfStep>
+          <AllowRetryFlag>N</AllowRetryFlag>
+          <BusinessComponent/>
+          <Operation/>
+          <BusinessServiceMethod/>
+          <BusinessServiceName/>
+          <Comments/>
+          <Description/>
+          <ErrorCode/>
+          <ErrorMessage/>
+          <EvaluateAll>Y</EvaluateAll>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*3*0*0*0*1*r12*36 36 132 849*FillBgClr8*167641088*ArrowEnd1*1</Layout>
+          <MaximumIterations/>
+          <Name3>Start</Name3>
+          <ProcessingMode/>
+          <SubprocessName/>
+          <Type>START</Type>
+          <UserInteractView/>
+          <TaskName/>
+          <ListOfRepositoryWfStepBranch>
+            <RepositoryWfStepBranch>
+              <Comments/>
+              <Count/>
+              <EvaluateSequence/>
+              <Event/>
+              <EventCancelFlag>N</EventCancelFlag>
+              <EventObject/>
+              <EventObjectType/>
+              <EventVisibility>ENTERPRISE</EventVisibility>
+              <Expression/>
+              <Inactive>N</Inactive>
+              <Name2>Connector 0</Name2>
+              <Subevent/>
+              <TimeLimit/>
+              <Type>DEFAULT</Type>
+              <UserEventName/>
+              <UserEventStorage/>
+              <UserEventTimeout>0</UserEventTimeout>
+              <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*156 604*NPts1*22*P06*120 604*ToHS1*08*ArrowEnd1*4</Layout>
+              <ToStepName>Get params from Request</ToStepName>
+              <ListOfRepositoryWfBranchCriteria/>
+            </RepositoryWfStepBranch>
+          </ListOfRepositoryWfStepBranch>
+          <ListOfRepositoryWfStepIOArgument/>
+          <ListOfRepositoryWfStepRecipient/>
+        </RepositoryWfStep>
+      </ListOfRepositoryWfStep>
+      <ListOfRepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Start</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*156 604*NPts1*22*P06*120 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 0</Name2>
+          <ForBranchName>Connector 0</ForBranchName>
+          <ParentType>DEFAULT</ParentType>
+          <ToStepName>Get params from Request</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Get params from Request</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*276 604*NPts1*22*P06*252 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 1</Name2>
+          <ForBranchName>Connector 1</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Decode Content</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Error Create XML Hier</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*8*0*0*0*9*LineWidth1*22*P27*1164 844*FrHS1*22*P18*1164 1684*NPts1*32*P08*1092 1684*ToHS1*38*ArrowEnd1*4</Layout>
+          <Name2>Connector 10</Name2>
+          <ForBranchName>Connector 10</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>End 0</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Error Create Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*756 1684*NPts1*22*P07*732 1684*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 11</Name2>
+          <ForBranchName>Connector 11</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Error Convert Content to XML</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Decode Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*396 604*NPts1*22*P06*372 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 2</Name2>
+          <ForBranchName>Connector 2</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Convert Content to Hier</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Convert Content to Hier</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*516 604*NPts1*22*P06*492 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 3</Name2>
+          <ForBranchName>Connector 3</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Invoke BS</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Invoke BS</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*636 604*NPts1*22*P06*612 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 4</Name2>
+          <ForBranchName>Connector 4</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Create Content</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Create Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*756 604*NPts1*22*P06*732 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 5</Name2>
+          <ForBranchName>Connector 5</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Convert Content to XML</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Convert Content to XML</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*876 604*NPts1*22*P06*852 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 6</Name2>
+          <ForBranchName>Connector 6</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Encode Content</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Encode Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*996 604*NPts1*22*P06*972 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 7</Name2>
+          <ForBranchName>Connector 7</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Create XML Hier</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Create XML Hier</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*1116 604*NPts1*22*P07*1092 604*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 8</Name2>
+          <ForBranchName>Connector 8</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>End 0</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Set Error</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*636 1684*NPts1*22*P07*612 1684*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Connector 9</Name2>
+          <ForBranchName>Connector 9</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Error Create Content</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Error Convert Content to XML</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*876 1684*NPts1*22*P07*852 1684*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Copy of Connector 6</Name2>
+          <ForBranchName>Copy of Connector 6</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Error Encode Content</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Error Encode Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*996 1684*NPts1*22*P07*972 1684*ToHS1*08*ArrowEnd1*4</Layout>
+          <Name2>Copy of Connector 7</Name2>
+          <ForBranchName>Copy of Connector 7</ForBranchName>
+          <ParentType>CONNECTOR</ParentType>
+          <ToStepName>Error Create XML Hier</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Get params from Request</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*204 1094*NPts1*42*P06*204 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 0</Name2>
+          <ForBranchName>Error Exception 0</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Decode Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*324 1094*NPts1*42*P06*324 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 1</Name2>
+          <ForBranchName>Error Exception 1</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Convert Content to Hier</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*444 1094*NPts1*42*P06*444 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 2</Name2>
+          <ForBranchName>Error Exception 2</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Invoke BS</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*8*0*0*0*9*LineWidth1*24*FrHS1*32*P17*564 1444*NPts1*22*P06*564 844*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 3</Name2>
+          <ForBranchName>Error Exception 3</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Create Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*684 1094*NPts1*42*P06*684 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 4</Name2>
+          <ForBranchName>Error Exception 4</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Convert Content to XML</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*804 1094*NPts1*42*P06*804 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 5</Name2>
+          <ForBranchName>Error Exception 5</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Encode Content</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P17*924 1094*NPts1*42*P06*924 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 6</Name2>
+          <ForBranchName>Error Exception 6</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+        <RepositoryWfBranchConnector>
+          <Comments/>
+          <FromStepName>Create XML Hier</FromStepName>
+          <Inactive>N</Inactive>
+          <Layout>@0*0*10*0*0*0*9*LineWidth1*22*P27*564 1094*FrHS1*32*P18*1044 1094*NPts1*42*P07*1044 842*P37*564 1444*ToHS1*19*LineColor3*2558*ArrowEnd1*4</Layout>
+          <Name2>Error Exception 7</Name2>
+          <ForBranchName>Error Exception 7</ForBranchName>
+          <ParentType>ERROR_EXC</ParentType>
+          <ToStepName>Set Error</ToStepName>
+        </RepositoryWfBranchConnector>
+      </ListOfRepositoryWfBranchConnector>
+      <ListOfRepositoryWfProcessMetric/>
+    </RepositoryWorkflowProcess>
+  </ListOfRepositoryWorkflowProcess>
+</SiebelMessage>

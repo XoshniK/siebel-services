@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class PropertySetUtils {
 
-	public Boolean isEqualPropertySets(SiebelPropertySet firstPS, SiebelPropertySet secondPS) {
-		return comparePropSets(firstPS, secondPS);
+	public boolean isEqualPropertySets(SiebelPropertySet firstPS, SiebelPropertySet secondPS) {
+		return compareHeaders(firstPS, secondPS)
+				&& compareProperties(firstPS, secondPS)
+				&& compareChildren(firstPS, secondPS);
 	}
 
 	public Stream<String> getPropertyNamesAsStream(SiebelPropertySet ps) {
@@ -20,12 +22,6 @@ public class PropertySetUtils {
 
 	public Stream<SiebelPropertySet> getChildrenAsStream(SiebelPropertySet ps) {
 		return IntStream.range(0, ps.getChildCount()).mapToObj(ps::getChild);
-	}
-
-	private boolean comparePropSets(SiebelPropertySet firstPS, SiebelPropertySet secondPS) {
-		return compareHeaders(firstPS, secondPS)
-				&& compareProperties(firstPS, secondPS)
-				&& compareChildren(firstPS, secondPS);
 	}
 
 	private boolean compareHeaders(SiebelPropertySet firstPS, SiebelPropertySet secondPS) {
@@ -52,7 +48,7 @@ public class PropertySetUtils {
 		return getChildrenAsStream(firstPS).allMatch(first -> secondPsChildren.stream().anyMatch(second -> {
 			boolean result = false;
 			if (!used.contains(second)) {
-				result = comparePropSets(first, second);
+				result = isEqualPropertySets(first, second);
 				if (result) {
 					used.add(second);
 				}
