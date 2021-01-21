@@ -17,6 +17,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -30,16 +31,15 @@ import org.xml.sax.SAXException;
 @Service
 public class XmlConverter {
 
-	private DocumentBuilder builder;
-
 	private Transformer transformer;
 
+	private DocumentBuilderFactory documentBuilderFactory;
+
 	@PostConstruct
-	public void init() throws ParserConfigurationException, TransformerConfigurationException {
-		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+	public void init() throws TransformerConfigurationException, ParserConfigurationException {
+		documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		String feature = "http://apache.org/xml/features/disallow-doctype-decl";
 		documentBuilderFactory.setFeature(feature, true);
-		builder = documentBuilderFactory.newDocumentBuilder();
 
 		TransformerFactory transformerFactory = TransformerFactory.newInstance();
 		transformerFactory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
@@ -50,8 +50,14 @@ public class XmlConverter {
 		transformer.setOutputProperty(OutputKeys.INDENT, "no");
 	}
 
+	@SneakyThrows
+	private DocumentBuilder getBuilder() {
+		return documentBuilderFactory.newDocumentBuilder();
+	}
+
 
 	public SiebelPropertySet convertToPropSet(String input) throws IOException, SAXException {
+		final DocumentBuilder builder = getBuilder();
 		Document doc = builder.parse(new InputSource(new StringReader(input)));
 		if (doc != null) {
 			SiebelPropertySet outputPS = new SiebelPropertySet();
@@ -84,6 +90,7 @@ public class XmlConverter {
 	}
 
 	public String convertToXml(SiebelPropertySet inputPS) throws TransformerException {
+		final DocumentBuilder builder = getBuilder();
 		Document document = builder.newDocument();
 		Element listOfContent = document.createElement("ListOfContent");
 		document.appendChild(listOfContent);
