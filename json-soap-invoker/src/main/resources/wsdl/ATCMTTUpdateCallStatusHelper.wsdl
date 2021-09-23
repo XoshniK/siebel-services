@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://siebel.com/CustomUI" targetNamespace="http://siebel.com/CustomUI">
+    <types/>
+    <message name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper_Input">
+        <part name="order_number" type="xsd:string"/>
+        <part name="status" type="xsd:string"/>
+        <part name="date" type="xsd:string"/>
+        <part name="answer" type="xsd:string"/>
+        <part name="phone" type="xsd:string"/>
+        <part name="request_id" type="xsd:string"/>
+        <part name="callid" type="xsd:string"/>
+    </message>
+    <message name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper_Output">
+        <part name="answer" type="xsd:string"/>
+        <part name="callid" type="xsd:string"/>
+        <part name="date" type="xsd:string"/>
+        <part name="order_number" type="xsd:string"/>
+        <part name="phone" type="xsd:string"/>
+        <part name="request_id" type="xsd:string"/>
+        <part name="status" type="xsd:string"/>
+    </message>
+    <portType name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper">
+        <operation name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper">
+            <input message="tns:ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper_Input"/>
+            <output message="tns:ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper_Output"/>
+        </operation>
+    </portType>
+    <binding name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper" type="tns:ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+        <operation name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper">
+            <soap:operation soapAction="rpc/http://siebel.com/CustomUI:ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper"/>
+            <input>
+                <soap:body namespace="http://siebel.com/CustomUI" use="literal"/>
+            </input>
+            <output>
+                <soap:body namespace="http://siebel.com/CustomUI" use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper">
+        <port binding="tns:ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper" name="ATC_spcMTT_spcUpdate_spcCall_spcStatus_spcHelper">
+            <soap:address location="http://&lt;webserver&gt;/eai_&lt;lang&gt;/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"/>
+        </port>
+    </service>
+</definitions>
